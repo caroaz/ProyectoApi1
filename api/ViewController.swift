@@ -11,28 +11,39 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.dataSource = self
         tableView.delegate = self
         
-        let anonymousFunction = { (fetchData: [Character]) in
-            //            Dispatchqueue nos permite una app más rapida, con menos bloqueos  y mejor experiencia de usuario
-            //            main: es el thread principal de la app, y podemos acceder a el desde cualquier punto de la app
-            DispatchQueue.main.async {
-                self.characterList = fetchData
-                //                reloadData, recarga las filas y secciones de la vista de la tabla
-                self.tableView.reloadData()
-            }
-            //
-        }
-        miApi.shared.fetchData(onCompletion: anonymousFunction)
-        
+        miApi.shared.fetchData { characters, error in
+                    DispatchQueue.main.async {
+                        guard let characters = characters else {
+                            print(error?.message)
+                            return
+                        }
+                        self.characterList = characters
+                        self.tableView.reloadData()
+                    }
+                }
+   
     }
 }
+//        let anonymousFunction = { (fetchData: [Character]) in
+//            //            Dispatchqueue nos permite una app más rapida, con menos bloqueos  y mejor experiencia de usuario
+//            //            main: es el thread principal de la app, y podemos acceder a el desde cualquier punto de la app
+//            DispatchQueue.main.async {
+//                self.characterList = fetchData
+//                //                reloadData, recarga las filas y secciones de la vista de la tabla
+//                self.tableView.reloadData()
+//            }
+//            //
+//        }
+//        miApi.shared.fetchData(onCompletion: anonymousFunction)
+//
+
 
 
 extension ViewController: UITableViewDataSource {
@@ -54,44 +65,37 @@ extension ViewController: UITableViewDataSource {
         let results =  characterList[indexPath.row]
         
         cell!.textLabel?.text = results.name
+        switch results.status {
+                case "Alive":
+                   cell?.contentView.backgroundColor = .green
+                case "Dead":
+                    cell?.contentView.backgroundColor = .red
+                default:
+                    cell?.contentView.backgroundColor = .lightGray
+                }
         return cell!
     }
 }
 extension ViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        
+        let vcAlive = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        let results =  characterList[indexPath.row]
+        vcAlive.dataName = results.name
+        vcAlive.statusData = results.status
+        vcAlive.speciesData = results.species
+        vcAlive.genderData = results.gender
+        
         if (characterList[indexPath.row].status) == "Alive"{
-            let vcAlive = storyboard?.instantiateViewController(withIdentifier: "AliveViewController") as! AliveViewController
-            let results =  characterList[indexPath.row]
-            vcAlive.dataName = results.name
-            vcAlive.statusData = results.status
-            vcAlive.speciesData = results.species
-            vcAlive.genderData = results.gender
-            
-            navigationController?.pushViewController(vcAlive, animated: true)
-        }else if  (characterList[indexPath.row].status) == "Dead" {
-            let vcDead = storyboard?.instantiateViewController(withIdentifier: "DeadViewController") as! DeadViewController
-            let results =  characterList[indexPath.row]
-            vcDead.dataName = results.name
-            vcDead.statusData = results.status
-            vcDead.speciesData = results.species
-            vcDead.genderData = results.gender
-            
-            
-            print (characterList[indexPath.row])
-            navigationController?.pushViewController(vcDead, animated: true)
-            
-        }else if  (characterList[indexPath.row].status) == "unknown"{
-            let vcUnknown = storyboard?.instantiateViewController(withIdentifier: "UnknownViewController") as! UnknownViewController
-            let results =  characterList[indexPath.row]
-            vcUnknown .dataName = results.name
-            vcUnknown .statusData = results.status
-            vcUnknown .speciesData = results.species
-            vcUnknown.genderData = results.gender
-            
-            
-            print (characterList[indexPath.row])
-            navigationController?.pushViewController(vcUnknown, animated: true)
+            vcAlive.view.backgroundColor = .green
+        }else if (characterList[indexPath.row].status) == "Dead"{
+            vcAlive.view.backgroundColor = .red
+        }else  {
+            vcAlive.view.backgroundColor = .lightGray
         }
+        
+    
+        navigationController?.pushViewController(vcAlive, animated: true)
     }
 }

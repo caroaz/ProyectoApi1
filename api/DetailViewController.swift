@@ -7,7 +7,7 @@
 
 import UIKit
 
-class UnknownViewController: UIViewController {
+class DetailViewController: UIViewController {
 
     @IBOutlet weak var NameLabel: UILabel!
     @IBOutlet weak var speciesLabel: UILabel!
