@@ -28,23 +28,12 @@ class ViewController: UIViewController {
                         self.tableView.reloadData()
                     }
                 }
-   
+        
     }
 }
-//        let anonymousFunction = { (fetchData: [Character]) in
+
 //            //            Dispatchqueue nos permite una app más rapida, con menos bloqueos  y mejor experiencia de usuario
 //            //            main: es el thread principal de la app, y podemos acceder a el desde cualquier punto de la app
-//            DispatchQueue.main.async {
-//                self.characterList = fetchData
-//                //                reloadData, recarga las filas y secciones de la vista de la tabla
-//                self.tableView.reloadData()
-//            }
-//            //
-//        }
-//        miApi.shared.fetchData(onCompletion: anonymousFunction)
-//
-
-
 
 extension ViewController: UITableViewDataSource {
     
@@ -80,22 +69,16 @@ extension ViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         
-        let vcAlive = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        let vcDetails = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
         let results =  characterList[indexPath.row]
-        vcAlive.dataName = results.name
-        vcAlive.statusData = results.status
-        vcAlive.speciesData = results.species
-        vcAlive.genderData = results.gender
-        
-        if (characterList[indexPath.row].status) == "Alive"{
-            vcAlive.view.backgroundColor = .green
-        }else if (characterList[indexPath.row].status) == "Dead"{
-            vcAlive.view.backgroundColor = .red
-        }else  {
-            vcAlive.view.backgroundColor = .lightGray
-        }
+        vcDetails.dataName = results.name
+        vcDetails.statusData = results.status
+        vcDetails.speciesData = results.species
+        vcDetails.genderData = results.gender
+        vcDetails.imageData = results.image
+       
         
     
-        navigationController?.pushViewController(vcAlive, animated: true)
+        navigationController?.pushViewController(vcDetails, animated: true)
     }
 }

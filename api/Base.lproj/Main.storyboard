@@ -48,25 +48,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EAl-lC-1L1">
-                                <rect key="frame" x="30" y="124" width="354" height="36"/>
+                                <rect key="frame" x="30" y="341" width="354" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9U-0M-ted">
-                                <rect key="frame" x="30" y="240" width="354" height="32"/>
+                                <rect key="frame" x="30" y="417" width="354" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xH-1g-fuo">
-                                <rect key="frame" x="30" y="292" width="354" height="32"/>
+                                <rect key="frame" x="30" y="469" width="354" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.arrow.down.on.square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="LV0-FR-2Iq">
+                                <rect key="frame" x="107" y="109.5" width="200" height="204"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="6Nz-WQ-2Xm"/>
+                                    <constraint firstAttribute="width" constant="200" id="Ufy-gC-sF5"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWo-Qa-bLA">
-                                <rect key="frame" x="30" y="344" width="354" height="32"/>
+                                <rect key="frame" x="30" y="521" width="354" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -75,30 +82,34 @@
                         <viewLayoutGuide key="safeArea" id="UI9-0r-tDE"/>
                         <color key="backgroundColor" systemColor="systemGray2Color"/>
                         <constraints>
-                            <constraint firstItem="EAl-lC-1L1" firstAttribute="top" secondItem="UI9-0r-tDE" secondAttribute="top" constant="80" id="24B-cq-FGa"/>
-                            <constraint firstItem="EAl-lC-1L1" firstAttribute="leading" secondItem="HzR-kg-8v4" secondAttribute="leading" constant="30" id="7b4-gD-kDF"/>
-                            <constraint firstItem="aWo-Qa-bLA" firstAttribute="top" secondItem="8xH-1g-fuo" secondAttribute="bottom" constant="20" id="FBM-BW-yzV"/>
-                            <constraint firstItem="8xH-1g-fuo" firstAttribute="top" secondItem="z9U-0M-ted" secondAttribute="bottom" constant="20" id="HTR-KH-oOO"/>
-                            <constraint firstItem="UI9-0r-tDE" firstAttribute="trailing" secondItem="8xH-1g-fuo" secondAttribute="trailing" constant="30" id="LUQ-iF-VyH"/>
-                            <constraint firstItem="z9U-0M-ted" firstAttribute="top" secondItem="EAl-lC-1L1" secondAttribute="bottom" constant="80" id="Rok-tO-kLU"/>
-                            <constraint firstItem="UI9-0r-tDE" firstAttribute="trailing" secondItem="aWo-Qa-bLA" secondAttribute="trailing" constant="30" id="eTN-Wi-MyP"/>
-                            <constraint firstItem="UI9-0r-tDE" firstAttribute="trailing" secondItem="z9U-0M-ted" secondAttribute="trailing" constant="30" id="eju-Q2-5Gh"/>
-                            <constraint firstItem="8xH-1g-fuo" firstAttribute="leading" secondItem="UI9-0r-tDE" secondAttribute="leading" constant="30" id="htH-xF-LE2"/>
-                            <constraint firstItem="UI9-0r-tDE" firstAttribute="trailing" secondItem="EAl-lC-1L1" secondAttribute="trailing" constant="30" id="kr0-AI-Psd"/>
-                            <constraint firstItem="z9U-0M-ted" firstAttribute="leading" secondItem="UI9-0r-tDE" secondAttribute="leading" constant="30" id="mgd-Wx-wYb"/>
-                            <constraint firstItem="aWo-Qa-bLA" firstAttribute="leading" secondItem="UI9-0r-tDE" secondAttribute="leading" constant="30" id="ySE-uG-DnT"/>
+                            <constraint firstItem="8xH-1g-fuo" firstAttribute="leading" secondItem="UI9-0r-tDE" secondAttribute="leading" constant="30" id="5LJ-eo-w9H"/>
+                            <constraint firstItem="UI9-0r-tDE" firstAttribute="trailing" secondItem="aWo-Qa-bLA" secondAttribute="trailing" constant="30" id="5dy-KG-Mbp"/>
+                            <constraint firstItem="UI9-0r-tDE" firstAttribute="trailing" secondItem="8xH-1g-fuo" secondAttribute="trailing" constant="30" id="Crh-2C-CTW"/>
+                            <constraint firstItem="8xH-1g-fuo" firstAttribute="top" secondItem="z9U-0M-ted" secondAttribute="bottom" constant="20" id="HP4-Km-VJQ"/>
+                            <constraint firstItem="UI9-0r-tDE" firstAttribute="trailing" secondItem="z9U-0M-ted" secondAttribute="trailing" constant="30" id="HYA-Vq-xG7"/>
+                            <constraint firstItem="UI9-0r-tDE" firstAttribute="trailing" secondItem="LV0-FR-2Iq" secondAttribute="trailing" constant="107" id="NSI-tg-NyX"/>
+                            <constraint firstItem="aWo-Qa-bLA" firstAttribute="leading" secondItem="UI9-0r-tDE" secondAttribute="leading" constant="30" id="Q0B-jl-nTx"/>
+                            <constraint firstItem="EAl-lC-1L1" firstAttribute="leading" secondItem="UI9-0r-tDE" secondAttribute="leading" constant="30" id="WWe-RS-Nok"/>
+                            <constraint firstItem="z9U-0M-ted" firstAttribute="leading" secondItem="UI9-0r-tDE" secondAttribute="leading" constant="30" id="gOF-pv-asB"/>
+                            <constraint firstItem="EAl-lC-1L1" firstAttribute="top" secondItem="LV0-FR-2Iq" secondAttribute="bottom" constant="30" id="h1V-aj-xBn"/>
+                            <constraint firstItem="UI9-0r-tDE" firstAttribute="trailing" secondItem="EAl-lC-1L1" secondAttribute="trailing" constant="30" id="hR1-ld-8to"/>
+                            <constraint firstItem="LV0-FR-2Iq" firstAttribute="top" secondItem="UI9-0r-tDE" secondAttribute="top" constant="67" id="ijB-pC-JiT"/>
+                            <constraint firstItem="z9U-0M-ted" firstAttribute="top" secondItem="EAl-lC-1L1" secondAttribute="bottom" constant="40" id="qcq-38-Mdx"/>
+                            <constraint firstItem="LV0-FR-2Iq" firstAttribute="leading" secondItem="UI9-0r-tDE" secondAttribute="leading" constant="107" id="uxi-Ck-0cb"/>
+                            <constraint firstItem="aWo-Qa-bLA" firstAttribute="top" secondItem="8xH-1g-fuo" secondAttribute="bottom" constant="20" id="vlh-i4-Sck"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="NameLabel" destination="EAl-lC-1L1" id="meH-TB-Vcq"/>
                         <outlet property="genderLabel" destination="aWo-Qa-bLA" id="ZNw-Wi-icF"/>
+                        <outlet property="imageView" destination="LV0-FR-2Iq" id="Azd-0u-7eK"/>
                         <outlet property="speciesLabel" destination="z9U-0M-ted" id="rSo-yA-4Wn"/>
                         <outlet property="statusLabel" destination="8xH-1g-fuo" id="JhC-gq-bgC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FRt-eo-Kwn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1864" y="63"/>
+            <point key="canvasLocation" x="1863.7681159420292" y="62.946428571428569"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CTS-1j-1ud">
@@ -120,6 +131,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="square.and.arrow.down.on.square" catalog="system" width="122" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 final class miApi {
     
     static let shared = miApi()
@@ -17,15 +18,24 @@ final class miApi {
         let task = URLSession.shared.dataTask(with: url){
             //            cuando tenga los datos los almacenara en la variable data,el error en variable error y si hay un codigo de respuesta en response
             (data, response, error ) in
+            
+            
+            
+            
+            
+            
             guard let data = data else {
                 onCompletion(nil, APIError(message: "Invalid model"))
                 return}
             // ejecutara el codigo en esta sección y retornara error si no se puede decodoficar
             guard  let characterList = try? JSONDecoder().decode(CharacterList.self, from: data) else {
                 onCompletion(nil, APIError(message: "Invalid request"))
+                
+    
+                
                 return
             }// con self indica que es un tipo de objeto, no es algo que estoy creando
-            
+         
             onCompletion(characterList.results, nil)
             
             
@@ -33,12 +43,16 @@ final class miApi {
         task.resume()
     }
 }
-struct Character:  Codable { // indica que es estructura si es codificable
+struct Character:  Codable {
+    
+    // indica que es estructura si es codificable
     let identifier:  Int
     let name : String
     let species: String
     let status: String
     let gender: String
+    let image: String
+    
     
     enum CodingKeys: String,  CodingKey{
         case identifier = "id"
@@ -46,10 +60,14 @@ struct Character:  Codable { // indica que es estructura si es codificable
         case species
         case status
         case gender
+        case image
     }
     
 }
 
+struct CharacterImage: Codable{
+    let image : String
+}
 struct CharacterList: Codable{
     let results: [Character]
 }
@@ -58,3 +76,4 @@ struct CharacterList: Codable{
 struct APIError {
     let message: String
 }
+
