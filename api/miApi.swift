@@ -40,6 +40,7 @@ struct Character: Decodable {
     let status: String
     let species: String
     let image: String
+    let gender: String
     
     enum CodingKeys: String, CodingKey {
         case identifier = "id"
@@ -47,6 +48,7 @@ struct Character: Decodable {
         case status
         case species
         case image
+        case gender
     }
 }
 

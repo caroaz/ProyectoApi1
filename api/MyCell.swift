@@ -10,18 +10,22 @@ import UIKit
 class MyCell: UITableViewCell {
     
     var nameLabel = UILabel()
+    var speciesLabel = UILabel()
     var characterImageView = UIImageView()
-
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         addSubview(nameLabel)
+        addSubview(speciesLabel)
         addSubview(characterImageView)
         
         configureNameLabel()
         configureImageView()
         setImageConstraint()
         setNameLabelConstraint()
+        setSpeciesLabelConstraint()
+        speciesNameLabel()
     }
     
     required init?(coder: NSCoder) {
@@ -32,6 +36,7 @@ class MyCell: UITableViewCell {
         let url = URL(string: results.image)
         characterImageView.downloaded(from: url!)
         nameLabel.text = results.name
+        speciesLabel.text = results.species
     }
     func configureImageView () {
         characterImageView.layer.cornerRadius = 10
@@ -42,6 +47,10 @@ class MyCell: UITableViewCell {
         nameLabel.numberOfLines = 0
         nameLabel.adjustsFontSizeToFitWidth = true
     }
+    func speciesNameLabel(){
+        speciesLabel.numberOfLines = 0
+        speciesLabel.adjustsFontSizeToFitWidth = true
+    }
     
     func setImageConstraint(){
         characterImageView.translatesAutoresizingMaskIntoConstraints = false
@@ -51,18 +60,29 @@ class MyCell: UITableViewCell {
             characterImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12),
             characterImageView.heightAnchor.constraint(equalToConstant: 80),
             characterImageView.widthAnchor.constraint(equalTo:  characterImageView.heightAnchor,multiplier: 16/9)
-        
+            
         ])
     }
     
     func setNameLabelConstraint(){
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            nameLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
+//            nameLabel.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 80),
+          
             nameLabel.leadingAnchor.constraint(equalTo: characterImageView.trailingAnchor,constant: 20),
-            nameLabel.heightAnchor.constraint(equalToConstant: 80),
+            nameLabel.heightAnchor.constraint(equalToConstant: 50),
             nameLabel.trailingAnchor.constraint(equalTo:  trailingAnchor, constant: -12)
-        
+            
+        ])
+    }
+    func setSpeciesLabelConstraint(){
+        speciesLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+//            speciesLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
+            speciesLabel.leadingAnchor.constraint(equalTo: characterImageView.trailingAnchor,constant: 20),
+            speciesLabel.heightAnchor.constraint(equalToConstant: 30),
+            speciesLabel.topAnchor.constraint(equalTo: nameLabel.topAnchor, constant: 50),
+            speciesLabel.trailingAnchor.constraint(equalTo:  trailingAnchor, constant: -12)
         ])
     }
 }
