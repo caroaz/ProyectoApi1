@@ -33,24 +33,25 @@ final class miApi {
         task.resume()
     }
 }
-struct Character:  Codable { // indica que es estructura si es codificable
-    let identifier:  Int
-    let name : String
-    let species: String
+
+struct Character: Decodable {
+    let identifier: Int
+    let name: String
     let status: String
-    let gender: String
+    let species: String
+    let image: String
     
-    enum CodingKeys: String,  CodingKey{
+    enum CodingKeys: String, CodingKey {
         case identifier = "id"
-        case  name
-        case species
+        case name
         case status
-        case gender
+        case species
+        case image
     }
-    
 }
 
-struct CharacterList: Codable{
+
+struct CharacterList: Decodable{
     let results: [Character]
 }
 

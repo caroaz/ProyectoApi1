@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		252A0EB727F38636009B271D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252A0EB627F38636009B271D /* DetailViewController.swift */; };
+		2557FF5C27F648400081B1A6 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2557FF5B27F648400081B1A6 /* UIView.swift */; };
+		2557FF5E27F64A8D0081B1A6 /* MyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2557FF5D27F64A8D0081B1A6 /* MyCell.swift */; };
 		25AB49DB27F1EAE1000B578C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AB49DA27F1EAE1000B578C /* AppDelegate.swift */; };
 		25AB49DD27F1EAE1000B578C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AB49DC27F1EAE1000B578C /* SceneDelegate.swift */; };
 		25AB49DF27F1EAE1000B578C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AB49DE27F1EAE1000B578C /* ViewController.swift */; };
@@ -39,6 +41,8 @@
 
 /* Begin PBXFileReference section */
 		252A0EB627F38636009B271D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		2557FF5B27F648400081B1A6 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		2557FF5D27F64A8D0081B1A6 /* MyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCell.swift; sourceTree = "<group>"; };
 		25AB49D727F1EAE1000B578C /* api.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = api.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25AB49DA27F1EAE1000B578C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25AB49DC27F1EAE1000B578C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +116,8 @@
 				25AB49E527F1EAE3000B578C /* LaunchScreen.storyboard */,
 				25AB49E827F1EAE3000B578C /* Info.plist */,
 				25B27D0827F25AB400D53FCC /* miApi.swift */,
+				2557FF5B27F648400081B1A6 /* UIView.swift */,
+				2557FF5D27F64A8D0081B1A6 /* MyCell.swift */,
 			);
 			path = api;
 			sourceTree = "<group>";
@@ -268,6 +274,8 @@
 				25AB49DB27F1EAE1000B578C /* AppDelegate.swift in Sources */,
 				25B27D0927F25AB400D53FCC /* miApi.swift in Sources */,
 				25AB49DD27F1EAE1000B578C /* SceneDelegate.swift in Sources */,
+				2557FF5E27F64A8D0081B1A6 /* MyCell.swift in Sources */,
+				2557FF5C27F648400081B1A6 /* UIView.swift in Sources */,
 				252A0EB727F38636009B271D /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
