@@ -6,6 +6,7 @@ import UIKit
 class ViewController: UIViewController {
     
     var characterList :  [Character] = []
+
     var tableView = UITableView ()
     
     
@@ -22,7 +23,7 @@ class ViewController: UIViewController {
             
             DispatchQueue.main.async {
                 guard let characters = characters else {
-                    print(error?.message)
+                    print(error?.message ?? "error")
                     return
                 }
                 self.characterList = characters

@@ -16,9 +16,9 @@ class MyCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        addSubview(nameLabel)
-        addSubview(speciesLabel)
-        addSubview(characterImageView)
+        contentView.addSubview(nameLabel)
+        contentView.addSubview(speciesLabel)
+        contentView.addSubview(characterImageView)
         
         configureNameLabel()
         configureImageView()
@@ -56,8 +56,8 @@ class MyCell: UITableViewCell {
         characterImageView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            characterImageView.centerYAnchor.constraint(equalTo: centerYAnchor),
-            characterImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12),
+            characterImageView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            characterImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 12),
             characterImageView.heightAnchor.constraint(equalToConstant: 80),
             characterImageView.widthAnchor.constraint(equalTo:  characterImageView.heightAnchor,multiplier: 16/9)
             
@@ -67,11 +67,10 @@ class MyCell: UITableViewCell {
     func setNameLabelConstraint(){
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-//            nameLabel.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 80),
-          
+            nameLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             nameLabel.leadingAnchor.constraint(equalTo: characterImageView.trailingAnchor,constant: 20),
-            nameLabel.heightAnchor.constraint(equalToConstant: 50),
-            nameLabel.trailingAnchor.constraint(equalTo:  trailingAnchor, constant: -12)
+//            nameLabel.heightAnchor.constraint(equalToConstant: 50),
+            nameLabel.trailingAnchor.constraint(equalTo:  contentView.trailingAnchor, constant: -12)
             
         ])
     }
@@ -80,9 +79,9 @@ class MyCell: UITableViewCell {
         NSLayoutConstraint.activate([
 //            speciesLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
             speciesLabel.leadingAnchor.constraint(equalTo: characterImageView.trailingAnchor,constant: 20),
-            speciesLabel.heightAnchor.constraint(equalToConstant: 30),
-            speciesLabel.topAnchor.constraint(equalTo: nameLabel.topAnchor, constant: 50),
-            speciesLabel.trailingAnchor.constraint(equalTo:  trailingAnchor, constant: -12)
+//            speciesLabel.heightAnchor.constraint(equalToConstant: 30),
+            speciesLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 10),
+            speciesLabel.trailingAnchor.constraint(equalTo:  contentView.trailingAnchor, constant: -12)
         ])
     }
 }
