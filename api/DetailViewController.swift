@@ -10,12 +10,11 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
-    @IBOutlet weak var NameLabel: UILabel!
-    @IBOutlet weak var SpeciesLabel: UILabel!
-    @IBOutlet weak var StatusLabel: UILabel!
-    @IBOutlet weak var GenderLabel: UILabel!
-    @IBOutlet weak var ImageDetailView: UIImageView!
-    
+    var imageLabel = UIImageView()
+    var nameLabel = UILabel()
+    var speciesLabel = UILabel()
+    var statusLabel = UILabel()
+    var genderLabel = UILabel()
     
     var  dataName : String = ""
     var statusData : String = ""
@@ -28,26 +27,98 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NameLabel.text = dataName
-        SpeciesLabel.text = "Specie: \(speciesData)"
-        StatusLabel.text = "Status: \(statusData)"
-        GenderLabel.text = "Gender: \(genderData)"
         
-        
-        
+        view.addSubview(imageLabel)
+        self.view.addSubview(nameLabel)
+        self.view.addSubview(speciesLabel)
+        self.view.addSubview(statusLabel)
+        self.view.addSubview(genderLabel)
+  
         let url = URL(string: imageData)!
+        imageLabel.downloaded(from: url)
         
-        //        iimageView.setRounded()
-        ImageDetailView.downloaded(from: url)
-        //
-        ImageDetailView.layer.cornerRadius = 10.0
-        ImageDetailView.clipsToBounds = true
+        print(imageData)
+        confNameLabel()
+        confSpeciesLabel()
+        confStatusLabel()
+        confGenderLabel()
+        
+        setNameLabelConstraint1()
+        setImageConstraint1()
+        setsSpeciesLabelConstraint1()
+        setsStatusLabelConstraint1()
+        setsGenderLabelConstraint1()
         
         
         // Do any additional setup after loading the view.
     }
     private func loadData(){
         
+    }
+    func confNameLabel() {
+        nameLabel.text = dataName
+        nameLabel.font = UIFont.boldSystemFont(ofSize: 22)
+        nameLabel.textAlignment = .center
+    }
+    func confSpeciesLabel(){
+        speciesLabel.text = "Specie: \(speciesData)"
+        speciesLabel.textAlignment = .center
+    }
+    func confStatusLabel(){
+        statusLabel.text = "Status: \(statusData)"
+        statusLabel.textAlignment = .center
+    }
+    func confGenderLabel(){
+        genderLabel.text = "Gender: \(genderData)"
+        genderLabel.textAlignment = .center
+    }
+    
+    func setNameLabelConstraint1(){
+        nameLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            nameLabel.topAnchor.constraint(equalTo: imageLabel.bottomAnchor, constant: 50),
+            nameLabel.leftAnchor.constraint(equalTo: view.leftAnchor),
+            nameLabel.rightAnchor.constraint(equalTo: view.rightAnchor),
+
+        ])
+    }
+    
+    func setsSpeciesLabelConstraint1(){
+        speciesLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            speciesLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 50),
+            speciesLabel.leftAnchor.constraint(equalTo: view.leftAnchor),
+            speciesLabel.rightAnchor.constraint(equalTo: view.rightAnchor),
+            
+        ])
+    }
+    func setsStatusLabelConstraint1(){
+        statusLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            statusLabel.topAnchor.constraint(equalTo: speciesLabel.bottomAnchor, constant: 20),
+            statusLabel.leftAnchor.constraint(equalTo: view.leftAnchor),
+            statusLabel.rightAnchor.constraint(equalTo: view.rightAnchor),
+            
+        ])
+    }
+    func setsGenderLabelConstraint1(){
+        genderLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            genderLabel.topAnchor.constraint(equalTo: statusLabel.bottomAnchor, constant: 20),
+            genderLabel.leftAnchor.constraint(equalTo: view.leftAnchor),
+            genderLabel.rightAnchor.constraint(equalTo: view.rightAnchor),
+            
+        ])
+    }
+    func setImageConstraint1(){
+        imageLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            imageLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            imageLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 150),
+            imageLabel.widthAnchor.constraint(equalToConstant: 200),
+            imageLabel.heightAnchor.constraint(equalToConstant:  200)
+            
+        ])
     }
     
 }
