@@ -73,8 +73,9 @@ extension ViewController: UITableViewDataSource {
 extension ViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        let vcDetail = DetailViewController()
         
-        let vcDetail = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+//        let vcDetail = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
         let results =  characterList[indexPath.row]
         vcDetail.dataName = results.name
         vcDetail.statusData = results.status
