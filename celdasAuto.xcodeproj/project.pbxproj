@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		252A0EB727F38636009B271D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252A0EB627F38636009B271D /* DetailViewController.swift */; };
 		2557FF5C27F648400081B1A6 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2557FF5B27F648400081B1A6 /* UIView.swift */; };
 		2557FF5E27F64A8D0081B1A6 /* MyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2557FF5D27F64A8D0081B1A6 /* MyCell.swift */; };
+		258D289727FC8D1E00399EE7 /* DetailTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258D289627FC8D1E00399EE7 /* DetailTableView.swift */; };
+		258D289B27FC901100399EE7 /* MyImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258D289A27FC901100399EE7 /* MyImageViewCell.swift */; };
+		258D289D27FCC2BD00399EE7 /* MyDataViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258D289C27FCC2BD00399EE7 /* MyDataViewCell.swift */; };
+		258D289F27FD2FE700399EE7 /* ExtensionAttributed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258D289E27FD2FE700399EE7 /* ExtensionAttributed.swift */; };
+		258D28A227FD389000399EE7 /* ExtensionUiImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258D28A127FD389000399EE7 /* ExtensionUiImage.swift */; };
 		25AB49DB27F1EAE1000B578C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AB49DA27F1EAE1000B578C /* AppDelegate.swift */; };
 		25AB49DD27F1EAE1000B578C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AB49DC27F1EAE1000B578C /* SceneDelegate.swift */; };
 		25AB49DF27F1EAE1000B578C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AB49DE27F1EAE1000B578C /* ViewController.swift */; };
@@ -40,10 +44,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		252A0EB627F38636009B271D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		2557FF5B27F648400081B1A6 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		2557FF5D27F64A8D0081B1A6 /* MyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCell.swift; sourceTree = "<group>"; };
-		25AB49D727F1EAE1000B578C /* api.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = api.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		258D289627FC8D1E00399EE7 /* DetailTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableView.swift; sourceTree = "<group>"; };
+		258D289A27FC901100399EE7 /* MyImageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyImageViewCell.swift; sourceTree = "<group>"; };
+		258D289C27FCC2BD00399EE7 /* MyDataViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDataViewCell.swift; sourceTree = "<group>"; };
+		258D289E27FD2FE700399EE7 /* ExtensionAttributed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionAttributed.swift; sourceTree = "<group>"; };
+		258D28A127FD389000399EE7 /* ExtensionUiImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUiImage.swift; sourceTree = "<group>"; };
+		25AB49D727F1EAE1000B578C /* celdasAuto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = celdasAuto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25AB49DA27F1EAE1000B578C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25AB49DC27F1EAE1000B578C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		25AB49DE27F1EAE1000B578C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,9 +59,9 @@
 		25AB49E327F1EAE3000B578C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		25AB49E627F1EAE3000B578C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		25AB49E827F1EAE3000B578C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		25AB49ED27F1EAE3000B578C /* apiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = apiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		25AB49ED27F1EAE3000B578C /* celdasAutoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = celdasAutoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		25AB49F127F1EAE3000B578C /* apiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apiTests.swift; sourceTree = "<group>"; };
-		25AB49F727F1EAE3000B578C /* apiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = apiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		25AB49F727F1EAE3000B578C /* celdasAutoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = celdasAutoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		25AB49FB27F1EAE3000B578C /* apiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apiUITests.swift; sourceTree = "<group>"; };
 		25AB49FD27F1EAE3000B578C /* apiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apiUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		25B27D0827F25AB400D53FCC /* miApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = miApi.swift; sourceTree = "<group>"; };
@@ -84,6 +92,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		258D28A027FD384000399EE7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2557FF5B27F648400081B1A6 /* UIView.swift */,
+				258D289E27FD2FE700399EE7 /* ExtensionAttributed.swift */,
+				258D28A127FD389000399EE7 /* ExtensionUiImage.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		25AB49CE27F1EAE1000B578C = {
 			isa = PBXGroup;
 			children = (
@@ -97,9 +115,9 @@
 		25AB49D827F1EAE1000B578C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				25AB49D727F1EAE1000B578C /* api.app */,
-				25AB49ED27F1EAE3000B578C /* apiTests.xctest */,
-				25AB49F727F1EAE3000B578C /* apiUITests.xctest */,
+				25AB49D727F1EAE1000B578C /* celdasAuto.app */,
+				25AB49ED27F1EAE3000B578C /* celdasAutoTests.xctest */,
+				25AB49F727F1EAE3000B578C /* celdasAutoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -111,13 +129,15 @@
 				25AB49DC27F1EAE1000B578C /* SceneDelegate.swift */,
 				25AB49DE27F1EAE1000B578C /* ViewController.swift */,
 				25AB49E027F1EAE1000B578C /* Main.storyboard */,
-				252A0EB627F38636009B271D /* DetailViewController.swift */,
+				258D289627FC8D1E00399EE7 /* DetailTableView.swift */,
+				258D28A027FD384000399EE7 /* Extensions */,
 				25AB49E327F1EAE3000B578C /* Assets.xcassets */,
 				25AB49E527F1EAE3000B578C /* LaunchScreen.storyboard */,
 				25AB49E827F1EAE3000B578C /* Info.plist */,
 				25B27D0827F25AB400D53FCC /* miApi.swift */,
-				2557FF5B27F648400081B1A6 /* UIView.swift */,
 				2557FF5D27F64A8D0081B1A6 /* MyCell.swift */,
+				258D289A27FC901100399EE7 /* MyImageViewCell.swift */,
+				258D289C27FCC2BD00399EE7 /* MyDataViewCell.swift */,
 			);
 			path = api;
 			sourceTree = "<group>";
@@ -142,9 +162,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		25AB49D627F1EAE1000B578C /* api */ = {
+		25AB49D627F1EAE1000B578C /* celdasAuto */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 25AB4A0127F1EAE3000B578C /* Build configuration list for PBXNativeTarget "api" */;
+			buildConfigurationList = 25AB4A0127F1EAE3000B578C /* Build configuration list for PBXNativeTarget "celdasAuto" */;
 			buildPhases = (
 				25AB49D327F1EAE1000B578C /* Sources */,
 				25AB49D427F1EAE1000B578C /* Frameworks */,
@@ -154,14 +174,14 @@
 			);
 			dependencies = (
 			);
-			name = api;
+			name = celdasAuto;
 			productName = api;
-			productReference = 25AB49D727F1EAE1000B578C /* api.app */;
+			productReference = 25AB49D727F1EAE1000B578C /* celdasAuto.app */;
 			productType = "com.apple.product-type.application";
 		};
-		25AB49EC27F1EAE3000B578C /* apiTests */ = {
+		25AB49EC27F1EAE3000B578C /* celdasAutoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 25AB4A0427F1EAE3000B578C /* Build configuration list for PBXNativeTarget "apiTests" */;
+			buildConfigurationList = 25AB4A0427F1EAE3000B578C /* Build configuration list for PBXNativeTarget "celdasAutoTests" */;
 			buildPhases = (
 				25AB49E927F1EAE3000B578C /* Sources */,
 				25AB49EA27F1EAE3000B578C /* Frameworks */,
@@ -172,14 +192,14 @@
 			dependencies = (
 				25AB49EF27F1EAE3000B578C /* PBXTargetDependency */,
 			);
-			name = apiTests;
+			name = celdasAutoTests;
 			productName = apiTests;
-			productReference = 25AB49ED27F1EAE3000B578C /* apiTests.xctest */;
+			productReference = 25AB49ED27F1EAE3000B578C /* celdasAutoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		25AB49F627F1EAE3000B578C /* apiUITests */ = {
+		25AB49F627F1EAE3000B578C /* celdasAutoUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 25AB4A0727F1EAE3000B578C /* Build configuration list for PBXNativeTarget "apiUITests" */;
+			buildConfigurationList = 25AB4A0727F1EAE3000B578C /* Build configuration list for PBXNativeTarget "celdasAutoUITests" */;
 			buildPhases = (
 				25AB49F327F1EAE3000B578C /* Sources */,
 				25AB49F427F1EAE3000B578C /* Frameworks */,
@@ -190,9 +210,9 @@
 			dependencies = (
 				25AB49F927F1EAE3000B578C /* PBXTargetDependency */,
 			);
-			name = apiUITests;
+			name = celdasAutoUITests;
 			productName = apiUITests;
-			productReference = 25AB49F727F1EAE3000B578C /* apiUITests.xctest */;
+			productReference = 25AB49F727F1EAE3000B578C /* celdasAutoUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -218,7 +238,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 25AB49D227F1EAE1000B578C /* Build configuration list for PBXProject "api" */;
+			buildConfigurationList = 25AB49D227F1EAE1000B578C /* Build configuration list for PBXProject "celdasAuto" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -231,9 +251,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				25AB49D627F1EAE1000B578C /* api */,
-				25AB49EC27F1EAE3000B578C /* apiTests */,
-				25AB49F627F1EAE3000B578C /* apiUITests */,
+				25AB49D627F1EAE1000B578C /* celdasAuto */,
+				25AB49EC27F1EAE3000B578C /* celdasAutoTests */,
+				25AB49F627F1EAE3000B578C /* celdasAutoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -272,11 +292,15 @@
 			files = (
 				25AB49DF27F1EAE1000B578C /* ViewController.swift in Sources */,
 				25AB49DB27F1EAE1000B578C /* AppDelegate.swift in Sources */,
+				258D289D27FCC2BD00399EE7 /* MyDataViewCell.swift in Sources */,
+				258D289F27FD2FE700399EE7 /* ExtensionAttributed.swift in Sources */,
 				25B27D0927F25AB400D53FCC /* miApi.swift in Sources */,
 				25AB49DD27F1EAE1000B578C /* SceneDelegate.swift in Sources */,
 				2557FF5E27F64A8D0081B1A6 /* MyCell.swift in Sources */,
 				2557FF5C27F648400081B1A6 /* UIView.swift in Sources */,
-				252A0EB727F38636009B271D /* DetailViewController.swift in Sources */,
+				258D289B27FC901100399EE7 /* MyImageViewCell.swift in Sources */,
+				258D289727FC8D1E00399EE7 /* DetailTableView.swift in Sources */,
+				258D28A227FD389000399EE7 /* ExtensionUiImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,12 +326,12 @@
 /* Begin PBXTargetDependency section */
 		25AB49EF27F1EAE3000B578C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 25AB49D627F1EAE1000B578C /* api */;
+			target = 25AB49D627F1EAE1000B578C /* celdasAuto */;
 			targetProxy = 25AB49EE27F1EAE3000B578C /* PBXContainerItemProxy */;
 		};
 		25AB49F927F1EAE3000B578C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 25AB49D627F1EAE1000B578C /* api */;
+			target = 25AB49D627F1EAE1000B578C /* celdasAuto */;
 			targetProxy = 25AB49F827F1EAE3000B578C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -457,6 +481,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = api/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CeldasAuto;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -484,6 +509,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = api/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CeldasAuto;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -517,7 +543,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/api.app/api";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/celdasAuto.app/celdasAuto";
 			};
 			name = Debug;
 		};
@@ -536,7 +562,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/api.app/api";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/celdasAuto.app/celdasAuto";
 			};
 			name = Release;
 		};
@@ -577,7 +603,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		25AB49D227F1EAE1000B578C /* Build configuration list for PBXProject "api" */ = {
+		25AB49D227F1EAE1000B578C /* Build configuration list for PBXProject "celdasAuto" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				25AB49FF27F1EAE3000B578C /* Debug */,
@@ -586,7 +612,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		25AB4A0127F1EAE3000B578C /* Build configuration list for PBXNativeTarget "api" */ = {
+		25AB4A0127F1EAE3000B578C /* Build configuration list for PBXNativeTarget "celdasAuto" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				25AB4A0227F1EAE3000B578C /* Debug */,
@@ -595,7 +621,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		25AB4A0427F1EAE3000B578C /* Build configuration list for PBXNativeTarget "apiTests" */ = {
+		25AB4A0427F1EAE3000B578C /* Build configuration list for PBXNativeTarget "celdasAutoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				25AB4A0527F1EAE3000B578C /* Debug */,
@@ -604,7 +630,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		25AB4A0727F1EAE3000B578C /* Build configuration list for PBXNativeTarget "apiUITests" */ = {
+		25AB4A0727F1EAE3000B578C /* Build configuration list for PBXNativeTarget "celdasAutoUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				25AB4A0827F1EAE3000B578C /* Debug */,

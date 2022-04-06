@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "25AB49D627F1EAE1000B578C"
-               BuildableName = "api.app"
-               BlueprintName = "api"
-               ReferencedContainer = "container:api.xcodeproj">
+               BuildableName = "celdasAuto.app"
+               BlueprintName = "celdasAuto"
+               ReferencedContainer = "container:celdasAuto.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "25AB49EC27F1EAE3000B578C"
-               BuildableName = "apiTests.xctest"
-               BlueprintName = "apiTests"
-               ReferencedContainer = "container:api.xcodeproj">
+               BuildableName = "celdasAutoTests.xctest"
+               BlueprintName = "celdasAutoTests"
+               ReferencedContainer = "container:celdasAuto.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "25AB49F627F1EAE3000B578C"
-               BuildableName = "apiUITests.xctest"
-               BlueprintName = "apiUITests"
-               ReferencedContainer = "container:api.xcodeproj">
+               BuildableName = "celdasAutoUITests.xctest"
+               BlueprintName = "celdasAutoUITests"
+               ReferencedContainer = "container:celdasAuto.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -65,9 +65,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "25AB49D627F1EAE1000B578C"
-            BuildableName = "api.app"
-            BlueprintName = "api"
-            ReferencedContainer = "container:api.xcodeproj">
+            BuildableName = "celdasAuto.app"
+            BlueprintName = "celdasAuto"
+            ReferencedContainer = "container:celdasAuto.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -82,9 +82,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "25AB49D627F1EAE1000B578C"
-            BuildableName = "api.app"
-            BlueprintName = "api"
-            ReferencedContainer = "container:api.xcodeproj">
+            BuildableName = "celdasAuto.app"
+            BlueprintName = "celdasAuto"
+            ReferencedContainer = "container:celdasAuto.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

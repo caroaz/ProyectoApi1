@@ -1,9 +1,4 @@
-//
-//  miApi.swift
-//  api
-//
-//  Created by Mobdev on 28-03-22.
-//
+
 
 import Foundation
 final class miApi {

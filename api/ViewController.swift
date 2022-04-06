@@ -6,7 +6,7 @@ import UIKit
 class ViewController: UIViewController {
     
     var characterList :  [Character] = []
-
+    
     var tableView = UITableView ()
     
     
@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        view.backgroundColor = .white
         configureTableView()
         
         miApi.shared.fetchData { characters, error in
@@ -55,8 +57,10 @@ extension ViewController: UITableViewDataSource {
     
     //    indica cuantas celdas queremos que tenga nuestra tabla
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         return characterList.count
         
+        //        print(characterList)
     }
     
     
@@ -73,15 +77,10 @@ extension ViewController: UITableViewDataSource {
 extension ViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let vcDetail = DetailViewController()
         
-//        let vcDetail = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
-        let results =  characterList[indexPath.row]
-        vcDetail.dataName = results.name
-        vcDetail.statusData = results.status
-        vcDetail.speciesData = results.species
-        vcDetail.genderData = results.gender
-        vcDetail.imageData = results.image
+        let vcDetail = DetailTableView()
+        vcDetail.dataContent = characterList[indexPath.row]
+
 
         navigationController?.pushViewController(vcDetail, animated: true)
     }
